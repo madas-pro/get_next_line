@@ -6,11 +6,13 @@
 /*   By: adolivie <adolivie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/05 18:46:38 by adolivie          #+#    #+#             */
-/*   Updated: 2025/12/05 18:52:00 by adolivie         ###   ########.fr       */
+/*   Updated: 2025/12/06 15:51:35 by adolivie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
 char *get_next_line(int fd)
-{}
+{
+    
+}

@@ -6,7 +6,7 @@
 /*   By: adolivie <adolivie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/05 18:46:58 by adolivie          #+#    #+#             */
-/*   Updated: 2025/12/06 14:30:51 by adolivie         ###   ########.fr       */
+/*   Updated: 2025/12/06 15:54:34 by adolivie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,3 +19,10 @@
 #ifndef BUFFER_SIZE
 # define BUFFER_SIZE
 
+/* helpers */
+size_t	ft_strlen(const char *str)
+char	*ft_strdup(const char *string)
+
+
+/* get_next_line */
+char *get_next_line(int fd)
