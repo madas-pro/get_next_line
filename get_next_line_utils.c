@@ -6,7 +6,7 @@
 /*   By: adolivie <adolivie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/05 18:46:43 by adolivie          #+#    #+#             */
-/*   Updated: 2025/12/11 02:16:52 by adolivie         ###   ########.fr       */
+/*   Updated: 2025/12/11 03:40:09 by adolivie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,19 +22,19 @@ size_t	ft_strlen(const char *str)
 	return (i);
 }
 
-char	*ft_strjoin(const char *src1, const char *src2)
+char	*ft_strjoin(char *src1, const char *src2)
 {
 	int		i;
 	int		j;
 	char	*dest;
 
-	dest = malloc(ft_strlen((char *)src1) + ft_strlen((char *)src2) + 1);
+	dest = malloc(ft_strlen(src1) + ft_strlen((char *)src2) + 1);
 	if (dest == NULL)
 		return (NULL);
 	i = 0;
 	while (src1[i])
 	{
-		dest[i] = (char)src1[i];
+		dest[i] = src1[i];
 		i++;
 	}
 	free(src1);
@@ -57,7 +57,7 @@ int	ft_search_newline(const char *string)
 	i = 0;
 	while (string[i] != '\n')
 	{
-		if (str[i] == '\0')
+		if (string[i] == '\0')
 			return (0);
 		i++;
 	}
