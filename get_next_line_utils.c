@@ -6,7 +6,7 @@
 /*   By: adolivie <adolivie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/05 18:46:43 by adolivie          #+#    #+#             */
-/*   Updated: 2025/12/06 15:54:24 by adolivie         ###   ########.fr       */
+/*   Updated: 2025/12/11 00:51:03 by adolivie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,4 +38,32 @@ char	*ft_strdup(const char *string)
 	}
 	ptr[i] = '\0';
 	return (ptr);
+}
+
+void	ft_putstr_l(char *s, int len)
+{
+	int	i;
+
+	i = 0;
+	while (i < len)
+	{
+		write(1, s + i, 1);
+		i++;
+	}
+}
+
+int	ft_search_newline(const char *string)
+{
+	int	i;
+
+	if (!string)
+		return (-1);
+	i = 0;
+	while (string[i] != '\n')
+	{
+		if (str[i] == '\0')
+			return (-1);
+		i++;
+	}
+	return (i);
 }
