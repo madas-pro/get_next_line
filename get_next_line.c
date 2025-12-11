@@ -6,7 +6,7 @@
 /*   By: adolivie <adolivie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/05 18:46:38 by adolivie          #+#    #+#             */
-/*   Updated: 2025/12/11 03:38:53 by adolivie         ###   ########.fr       */
+/*   Updated: 2025/12/11 04:29:09 by adolivie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,4 +37,11 @@ char	*get_next_line(int fd)
 		}
 	}
 	return (str);
+}
+
+#include <stdio.h>
+int main(void)
+{
+	int fd = open("pitie.txt", O_RDONLY);
+	printf("%s\n", get_next_line(fd));
 }
