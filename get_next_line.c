@@ -6,7 +6,7 @@
 /*   By: adolivie <adolivie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/05 18:46:38 by adolivie          #+#    #+#             */
-/*   Updated: 2025/12/11 01:14:39 by adolivie         ###   ########.fr       */
+/*   Updated: 2025/12/11 01:31:20 by adolivie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,11 @@
 
 char	*get_next_line(int fd)
 {
-	char	*buf;
-	int		newline_pos;
+	char		*buf;
+	int			newline_pos;
+	static int	count;
 
-	static *char stash;
+	count = 0;
 	if (fd < 0)
 		return (NULL);
 	buf = malloc(BUFFER_SIZE);
@@ -25,11 +26,10 @@ char	*get_next_line(int fd)
 		return (NULL);
 	while (...)
 	{
-		read(fd, buf, BUFFER_SIZE);
+		count += read(fd, buf, BUFFER_SIZE);
 		stash = ft_strdup(buf);
 		newline_pos = ft_search_newline(stash);
 		ft_putstr(stash, newline_pos);
-		
 	}
 }
 
