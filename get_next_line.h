@@ -6,7 +6,7 @@
 /*   By: adolivie <adolivie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/05 18:46:58 by adolivie          #+#    #+#             */
-/*   Updated: 2025/12/12 12:24:03 by adolivie         ###   ########.fr       */
+/*   Updated: 2025/12/12 12:35:51 by adolivie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,12 @@
 # define BUFFER_SIZE 42
 #endif
 
+/* get_next_line */
+char	*get_next_line(int fd);
+
 /* helpers */
 size_t	ft_strlen(const char *str);
 char	*ft_strjoin(char *src1, const char *src2);
 char	*ft_strdup(const char *string);
 int		ft_search_newline(const char *string);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
-
-/* get_next_line */
-char	*get_next_line(int fd);
